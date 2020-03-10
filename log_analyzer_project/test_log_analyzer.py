@@ -24,9 +24,9 @@ LOGGER = logging.getLogger(__name__)
 class TestFindLog(unittest.TestCase):
     """ Тестирование поиска логов """
 
-    files = ['log/nginx-access-ui.log-20170101.gz',
-             'log/nginx-access-ui.log-20170102.gz',
-             'log/nginx-access-ui.log-20170103.gz']
+    files = ['./log/nginx-access-ui.log-21000101.gz',
+             './log/nginx-access-ui.log-21000102.gz',
+             './log/nginx-access-ui.log-21000103.gz']
 
     @classmethod
     def setUp(cls):
@@ -43,7 +43,7 @@ class TestFindLog(unittest.TestCase):
         """ поиск лога в указанной директории """
         file_current = find_log('./log')
 
-        self.assertEqual(file_current, os.path.join('./log', "nginx-access-ui.log-20170103.gz"))
+        self.assertEqual(file_current, os.path.join('./log', "nginx-access-ui.log-21000103.gz"))
 
 class TestMainFunctions(unittest.TestCase):
     """ тесты для основных функций из log_analyzer """

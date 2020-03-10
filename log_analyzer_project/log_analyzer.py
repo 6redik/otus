@@ -5,8 +5,8 @@
 На выходе - html - Таблица с посчитанными данными в разрезе url адресов.
 
 Пример запуска программы:
-$ python log_analyzer.py --LOG_DIR .. --LOG_FILE ./log/log.log
-Файл-архив логов в папке ..
+$ python log_analyzer.py --LOG_DIR ./log --LOG_FILE ./log/log.log
+Файл-архив логов в папке ./log
 Файл с логами будет лежать тут: ./log/log.log
 На выходе файл .reports/report_results.html
 """
@@ -53,9 +53,9 @@ def find_log(log_dir):
     LOGGER.info('Поиск всех файлов с логами в директории %s', log_dir)
 
     file_current = None
-    for f in os.listdir(log_dir):
-        if re.match(r'nginx-access-ui.log-.*.gz', f):
-            file = re.match(r'nginx-access-ui.log-.*.gz', f)[0]
+    for file_ in os.listdir(log_dir):
+        if re.match(r'nginx-access-ui.log-.*.gz', file_):
+            file = re.match(r'nginx-access-ui.log-.*.gz', file_)[0]
 
             # лексикографическое сравнение файлов (если даты в верном формате,
             # то сравниться корректно)
