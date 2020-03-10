@@ -1,0 +1,5 @@
+**.pyc
+**.log
+**.pynb
+notebooks/
+log/nginx-access-ui.log-20170630.gz
