@@ -2,6 +2,7 @@
 **.pynb
 **.xml
 **.iml
+.idea/
 notebooks/
 !log/
 log/nginx-access-ui.log-20170630.gz
